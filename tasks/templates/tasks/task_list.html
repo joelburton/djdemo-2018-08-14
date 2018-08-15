@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tasks</title>
+</head>
+<body>
+<h1>Tasks!</h1>
+<ul>
+{% for task in task_list %}
+    <li>
+
+        <a href="{{  task.get_absolute_url }}">{{ task }}</a>
+        {%  if task.done %}Yay!{% else %}Please do!{% endif  %}
+
+    </li>
+{% endfor %}
+</ul>
+</body>
+</html>
